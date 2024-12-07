@@ -1,0 +1,85 @@
+.customercart_container_one{
+    height: 850px;
+    width:1492px;
+    padding: 0px 0px;
+    background-color: #fff;
+    overflow: hidden;
+    backdrop-filter: grayscale(10px);
+    overflow-y: scroll;
+}
+
+.customercart_container_animation{
+    animation: customercart_container_animation-animation 1.5s ease 0s;
+}
+@keyframes customercart_container_animation-animation {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.customercart_container_two{
+    min-height: 770px;
+    min-width:1492px;
+    max-width:1492px;
+    margin:10px 30px;
+    z-index: 2;
+    position: relative;
+    overflow-y: scroll;
+    display: flex;
+    padding: 10px;
+}
+
+.customercart_dress_holder{
+    height:300px;
+    width:900px;
+    margin: 40px 0px 20px 40px;
+    display: flex;
+    align-items: center;
+    padding: 0px 50px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px 1px rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: bolder;
+}
+.customercart_container_three{
+    width:1000px;
+    height:800px;
+    padding: 0px 0px 0px 50px;
+}
+
+.customercart_dress_holder_image{
+    height:200px;
+    width:200px;
+}
+.customercart_dress_holder_desc{
+    width: 400px;
+    height: 200px;
+    margin: 0px 20px;
+    padding: 0px 30px;
+}
+.customercart_container_four{
+    height:800px;
+    /* border: 1px solid; */
+    border-radius: 22px;
+    width:400px;
+    margin: 0px 20px;
+    padding: 30px 50px;
+}
+.customercart_container_one_button{
+    height:50px;
+    width:260px;
+    background-color: transparent;
+    outline: none;
+    border: 1.5px solid #4c1489;
+    border-radius: 12px;
+    color: #000;
+    cursor: pointer;
+    backdrop-filter: blur(12px);
+    font-size: 20px;
+    font-variant: small-caps;
+    overflow: hidden;   
+    transition: all 0.2s ease-in;
+}
+.customercart_container_one_button:hover{
+    background-color: #4c1489;
+    color: #fff;
+}

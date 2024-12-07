@@ -1,0 +1,108 @@
+
+.help_container_one{
+    height: 850px;
+    width:1492px;
+    padding: 0px 0px;
+    background-color: #fff;
+    background-size: cover;
+    backdrop-filter: grayscale(10px);
+}
+
+.help_container_two{
+    height: 770px;
+    width:1492px;
+    padding: 0px 0px;
+    margin-top:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.help_container_two_img{
+    animation: help_container_two_img-animation 1s ease-out 0s;
+}
+@keyframes help_container_two_img-animation {
+    0%{position: relative; left:300px; opacity: 0;}
+    100%{position: relative; left: 0; opacity: 1;}
+}
+
+.help_container_three{
+    height: 700px;
+    width:550px;
+    padding: 0px 0px;
+    background-color: transparent;
+    border: 4px solid #daccfe;
+    border-radius: 22px;
+    margin: 0px 40px;
+    padding: 20px 40px;
+    animation: help_container_three-animation 1s ease-out 0s;
+}
+@keyframes help_container_three-animation {
+    0%{position: relative; right:300px; opacity: 0;}
+    100%{position: relative; right: 0; opacity: 1;}
+}
+.help_container_three_chat_div{
+    height:500px;
+    overflow-y: scroll;
+    width:460px;
+}
+
+.loading_animation{
+    animation: loading_animation 3s ;
+    position: relative;
+}
+.loading_animation:nth-child(2){
+    animation-delay: 0.06s;
+}
+.loading_animation:nth-child(3){
+    animation-delay: 0.12s;
+}
+
+@keyframes loading_animation {
+    0%{top: 15px;}
+    25%{top: -15px;}
+    50%{top: 15px;}
+    75%{top: -15px;}
+    100%{top: 0px;}
+}
+
+.help_container_messageSent{
+    border: 2px solid #3cc8e9;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 20px;
+    border-bottom-right-radius: 0px;
+    line-height: 22px;
+    margin-left: auto;
+    max-width: 300px;
+}
+
+.help_container_messageReceived{
+    border: 2px solid #daccfe;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 20px;
+    border-top-left-radius: 0px;
+    line-height: 22px;
+    max-width: 300px;
+}
+
+.help_container_questions_div{
+    width:535px;
+    height:160px;
+    overflow-y: scroll;
+    position: fixed;
+    top:650px;
+    padding: 5px 12px;
+    margin-left: -38px;
+}
+.help_container_questions_div_p{
+    line-height: 36px;
+}
+.help_container_questions_div_span{
+    padding: 6px 4px;
+    border: 1px solid;
+    border-radius: 22px;
+    margin: 20px 0px;
+    cursor: pointer;
+}
