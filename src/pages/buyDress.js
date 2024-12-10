@@ -65,7 +65,7 @@ export const BuyDress=()=>{
         for(let j = 0;j<dressId.length;j=j+1){
             for(let i=0;i<main_data_from_cartOrdress.length;i=i+1){
                 let main_data_images = main_data_from_cartOrdress[i].images;
-                if(dressId[j] === main_data_images[0] || dressId[j].substring(21, dressId[j].length+1)=== main_data_images[0] ){
+                if(dressId[j] === main_data_images[0] || dressId[j].substring(21, dressId[j].length+1)=== main_data_images[0] || dressId[j].substring(28, dressId[j].length+1)=== main_data_images[0] ){
     
                     let main_name_data = main_data_from_cartOrdress[i].name
                     let main_cost_data = Number(main_data_from_cartOrdress[i].cost)
