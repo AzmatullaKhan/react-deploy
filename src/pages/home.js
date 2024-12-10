@@ -16,7 +16,7 @@ export const Home=()=>{
     const navigate = useNavigate()
     let main_data=[]
 
-    axios.get('https://spring-deploy-production-2a84.up.railway.app/images/all').then(res=>{main_data=res.data}).catch(err=>{console.log(err)})
+    axios.get('http://localhost:9001/images/all').then(res=>{main_data=res.data}).catch(err=>{console.log(err)})
 
     setTimeout(()=>{
         photoFunction()
@@ -234,7 +234,7 @@ export const Home=()=>{
                 }
             }
             try {
-                const response = await axios.post('https://spring-deploy-production-2a84.up.railway.app/customercart/upload', formData);
+                const response = await axios.post('http://localhost:9001/customercart/upload', formData);
                 handleCloseContainerThree()
                 alert('Added to Cart')
                 console.log(response)

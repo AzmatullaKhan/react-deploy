@@ -28,7 +28,7 @@ export const ResetPassword=()=>{
         e.preventDefault();
         let mobileNumber = document.getElementById('resetPassword_number').value
 
-        axios.get('https://spring-deploy-production-2a84.up.railway.app/customer/resetPassword/'+mobileNumber)
+        axios.get('http://localhost:9001/customer/resetPassword/'+mobileNumber)
         .then(res=>{localStorage.setItem('isValidUserNumber', (res.data))})
         .catch(err=>{localStorage.setItem('isValidUserNumber', err.message)})
 
@@ -96,7 +96,7 @@ export const ResetPassword=()=>{
             let password = document.getElementById('resetPassword_changePassword').value
             let mobileNumber= document.getElementById('resetPassword_number').value
 
-            axios.post('https://spring-deploy-production-2a84.up.railway.app/customer/changePassword/'+mobileNumber+'/'+password)
+            axios.post('http://localhost:9001/customer/changePassword/'+mobileNumber+'/'+password)
             .then(res=>{console.log(res)})
             .catch(err=>{console.log(err)})
             

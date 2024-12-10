@@ -68,7 +68,7 @@ export const Profile=()=>{
             password=document.getElementById('profile_password').value
             let mobileNumber= document.getElementById('profile_mobileNumber').value
 
-            axios.post('https://spring-deploy-production-2a84.up.railway.app/customer/changePassword/'+mobileNumber+'/'+password)
+            axios.post('http://localhost:9001/customer/changePassword/'+mobileNumber+'/'+password)
             .then(res=>{console.log(res)})
             .catch(err=>{console.log(err)})
 

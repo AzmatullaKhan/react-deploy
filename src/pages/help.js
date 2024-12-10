@@ -83,11 +83,67 @@ export const Help=()=>{
         main_div.appendChild(p_reply)
         main_div.scrollTop=main_div.scrollHeight
 
-        setTimeout(()=>{
-            p_reply.innerHTML="Reply"
-            document.getElementById('help_container_questions_div_p').style.pointerEvents=''
-            document.getElementById('navbar').style.pointerEvents=''
-        }, 3090)
+        if(e.target.innerHTML === " What is this XYZ bug? "){
+            setTimeout(()=>{
+                p_reply.innerHTML="This bug can be solved when our collaborator calls you."
+                document.getElementById('help_container_questions_div_p').style.pointerEvents=''
+                document.getElementById('navbar').style.pointerEvents=''
+            }, 3090)
+        }else if(e.target.innerHTML === " Need to Update my details but can't able to? "){
+            setTimeout(()=>{
+                p_reply.innerHTML="Navigate to /home and login. Then proceed with right most option provided."
+                document.getElementById('help_container_questions_div_p').style.pointerEvents=''
+                document.getElementById('navbar').style.pointerEvents=''
+            }, 3090)
+        }else if(e.target.innerHTML === " How should I check my things? "){
+            setTimeout(()=>{
+                p_reply.innerHTML="All the required details will be shown once you go to home page."
+                document.getElementById('help_container_questions_div_p').style.pointerEvents=''
+                document.getElementById('navbar').style.pointerEvents=''
+            }, 3090)
+        }else if(e.target.innerHTML === " Is there any refund feture in here? "){
+            setTimeout(()=>{
+                p_reply.innerHTML="The refund feature will only be applicable if you have valid reason."
+                document.getElementById('help_container_questions_div_p').style.pointerEvents=''
+                document.getElementById('navbar').style.pointerEvents=''
+            }, 3090)
+        }else if(e.target.innerHTML === " How good is your service? "){
+            setTimeout(()=>{
+                p_reply.innerHTML="This service is of 5 star, which even dominates amazon when it comes to handloom fashions."
+                document.getElementById('help_container_questions_div_p').style.pointerEvents=''
+                document.getElementById('navbar').style.pointerEvents=''
+            }, 3090)
+        }else if(e.target.innerHTML === " Is this process trust worthy? "){
+            setTimeout(()=>{
+                p_reply.innerHTML="💯"
+                document.getElementById('help_container_questions_div_p').style.pointerEvents=''
+                document.getElementById('navbar').style.pointerEvents=''
+            }, 3090)
+        }else if(e.target.innerHTML === " How should I complete my SignIn. "){
+            setTimeout(()=>{
+                p_reply.innerHTML="SignUp proces requires username, mobile number, DOB, gender password(Strong)."
+                document.getElementById('help_container_questions_div_p').style.pointerEvents=''
+                document.getElementById('navbar').style.pointerEvents=''
+            }, 3090)
+        }else if(e.target.innerHTML === " Who developed this? "){
+            setTimeout(()=>{
+                p_reply.innerHTML="Developed by Azmatulla and Santhosh"
+                document.getElementById('help_container_questions_div_p').style.pointerEvents=''
+                document.getElementById('navbar').style.pointerEvents=''
+            }, 3090)
+        }else if(e.target.innerHTML === " Can I do this? "){
+            setTimeout(()=>{
+                p_reply.innerHTML="Yes, absolutely. But requires a good knowledge over designing and intermediate level knowledge of React and SpringBoot."
+                document.getElementById('help_container_questions_div_p').style.pointerEvents=''
+                document.getElementById('navbar').style.pointerEvents=''
+            }, 3090)
+        }else if(e.target.innerHTML === " Specify the process to complete a booking in this website. "){
+            setTimeout(()=>{
+                p_reply.innerHTML="This is a really big process, cannot be done in single reply...😮‍💨."
+                document.getElementById('help_container_questions_div_p').style.pointerEvents=''
+                document.getElementById('navbar').style.pointerEvents=''
+            }, 3090)
+        }
     }
 
     return(

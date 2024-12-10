@@ -24,10 +24,10 @@ export const BuyDress=()=>{
     },100)
 
     let main_data=[]
-    axios.get('https://spring-deploy-production-2a84.up.railway.app/images/all').then(res=>{main_data=res.data}).catch(err=>{console.log(err)})
+    axios.get('http://localhost:9001/images/all').then(res=>{main_data=res.data}).catch(err=>{console.log(err)})
 
     let cart_data=[]
-    axios.get('https://spring-deploy-production-2a84.up.railway.app/customercart/all').then(res=>{cart_data=res.data}).catch(err=>{console.log(err)})
+    axios.get('http://localhost:9001/customercart/all').then(res=>{cart_data=res.data}).catch(err=>{console.log(err)})
 
     let size,dressId;
     setTimeout(()=>{
@@ -311,12 +311,12 @@ export const BuyDress=()=>{
                                 let IndividualForm = {dressname, dresscost, data1, dresspublisher, buyername, buyernumber, buyersize, deliveredstatus, quantity}
                                 
 
-                                axios.post('https://spring-deploy-production-2a84.up.railway.app/order/createOrder', FormData).then(res=>{console.log(res)}).catch(err=>{console.log(err)})
+                                axios.post('http://localhost:9001/order/createOrder', FormData).then(res=>{console.log(res)}).catch(err=>{console.log(err)})
                                 
-                                axios.post('https://spring-deploy-production-2a84.up.railway.app/employeeOrder/createOrder', IndividualForm).then(res=>console.log(res)).catch(err=>{console.log(err)})
+                                axios.post('http://localhost:9001/employeeOrder/createOrder', IndividualForm).then(res=>console.log(res)).catch(err=>{console.log(err)})
         
                                 if(localStorage.getItem('fromCart'))
-                                    axios.delete('https://spring-deploy-production-2a84.up.railway.app/customercart/deleteCart/'+main_data_from_cartOrdress[i].id).then((res)=>{console.log(res)}).catch((err)=>{console.log(err)})
+                                    axios.delete('http://localhost:9001/customercart/deleteCart/'+main_data_from_cartOrdress[i].id).then((res)=>{console.log(res)}).catch((err)=>{console.log(err)})
                             }
                         }
                     }

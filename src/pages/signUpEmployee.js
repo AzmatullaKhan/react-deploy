@@ -110,12 +110,12 @@ export const SignUpEmployee = () =>{
             let pass1;
             let pass2;
 
-            axios.get('https://spring-deploy-production-2a84.up.railway.app/employee/checkUsername/'+username)
+            axios.get('http://localhost:9001/employee/checkUsername/'+username)
             .then(res=>{(localStorage.setItem('respponseUsername', res.data))})
             .catch((err)=>{console.log(err.message+"1")})
 
             
-            axios.get('https://spring-deploy-production-2a84.up.railway.app/employee/checkMobileNumber/'+mobileNumber)
+            axios.get('http://localhost:9001/employee/checkMobileNumber/'+mobileNumber)
             .then(res=>{localStorage.setItem('responseMobileNumber',res.data)})
             .catch((err)=>{console.log(err.message)})
             
@@ -172,7 +172,7 @@ export const SignUpEmployee = () =>{
                 gender:gender
             }
 
-            axios.post('https://spring-deploy-production-2a84.up.railway.app/employee/saveEmployee',Employee)
+            axios.post('http://localhost:9001/employee/saveEmployee',Employee)
             .then(res=>{return res})
             .catch((err)=>{console.log(err.message)})
 
