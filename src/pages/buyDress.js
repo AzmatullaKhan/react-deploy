@@ -36,15 +36,36 @@ export const BuyDress=()=>{
     }, 100)
 
     const renderFunction=()=>{
+        console.log(dressId)
         let main_data_from_cartOrdress =[]
         if(localStorage.getItem('fromCart'))
             main_data_from_cartOrdress = cart_data
         else
             main_data_from_cartOrdress = main_data
+
+            let new_id = 1
+            if(main_data_from_cartOrdress.length>0){
+                new_id = Number(main_data_from_cartOrdress[main_data_from_cartOrdress.length-1].id)+1
+            }
+            main_data_from_cartOrdress.push({
+                id:new_id,
+                cost:"5500",
+                images:[
+                    require('../images/trial0/one.png'),
+                    require('../images/trial0/two.png'),
+                    require('../images/trial0/three.png'),
+                    require('../images/trial0/four.png'),
+                    require('../images/trial0/five.png')
+                ],
+                description:"Dive into the deep hues of indigo with our kalamkari short dress. Adorned with velvet embroidery and playful tassels, this outfit is ideal for everyday wear.",
+                materialUsed:"Cotton,Silk",
+                name:"Velvet embroidered, indigo kalamkari cotton summer dress",
+                publisher:"publisher name"
+        })
         for(let j = 0;j<dressId.length;j=j+1){
             for(let i=0;i<main_data_from_cartOrdress.length;i=i+1){
                 let main_data_images = main_data_from_cartOrdress[i].images;
-                if(dressId[j] === main_data_images[0]){
+                if(dressId[j] === main_data_images[0] || dressId[j].substring(21, dressId[j].length+1)=== main_data_images[0] ){
     
                     let main_name_data = main_data_from_cartOrdress[i].name
                     let main_cost_data = Number(main_data_from_cartOrdress[i].cost)

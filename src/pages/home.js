@@ -23,6 +23,26 @@ export const Home=()=>{
         // console.log(main_data)
     },2000)
     const photoFunction = () =>{
+        let new_id = 1
+        if(main_data.length>0){
+            new_id = Number(main_data[main_data.length-1].id)+1
+        }
+        main_data.push({
+                id:new_id,
+                cost:"5500",
+                images:[
+                    require('../images/trial0/one.png'),
+                    require('../images/trial0/two.png'),
+                    require('../images/trial0/three.png'),
+                    require('../images/trial0/four.png'),
+                    require('../images/trial0/five.png')
+                ],
+                description:"Dive into the deep hues of indigo with our kalamkari short dress. Adorned with velvet embroidery and playful tassels, this outfit is ideal for everyday wear.",
+                materialUsed:"Cotton,Silk",
+                name:"Velvet embroidered, indigo kalamkari cotton summer dress",
+                publisher:"publisher name"
+        })
+        console.log(main_data)
         for(let i = 1; i <= main_data.length; i=i+1){
 
             let main_images_data = main_data[i-1].images
@@ -70,6 +90,7 @@ export const Home=()=>{
                 document.getElementById('main_container_three_dressCost').textContent = formattedValue
             })
         }
+        
         
     }
     const handleClickOnDress = (e) => {
