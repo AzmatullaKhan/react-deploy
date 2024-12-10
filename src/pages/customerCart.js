@@ -3,7 +3,7 @@ import './css/customerCart.css'
 import { useNavigate } from 'react-router-dom'
 export const CustomerCart=()=>{
     let main_data = []
-    axios.get('http://localhost:9001/customercart/all').then(res=>{main_data=res.data}).catch(err=>{console.log(err)})
+    axios.get('https://spring-deploy-production-2a84.up.railway.app/customercart/all').then(res=>{main_data=res.data}).catch(err=>{console.log(err)})
 
     let username;
 
@@ -102,7 +102,7 @@ export const CustomerCart=()=>{
                 button.className='customercart_container_one_button'
                 button.id=main_data[i].id
                 button.addEventListener('click', (e)=>{
-                    axios.delete('http://localhost:9001/customercart/deleteCart/'+e.target.id).then((res)=>{console.log(res)}).catch((err)=>{console.log(err)})
+                    axios.delete('https://spring-deploy-production-2a84.up.railway.app/customercart/deleteCart/'+e.target.id).then((res)=>{console.log(res)}).catch((err)=>{console.log(err)})
                     window.location.reload()
                 })
 

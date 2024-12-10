@@ -11,10 +11,10 @@ export const MyOrders = () =>{
         username= localStorage.getItem('username')
     },100)
     let order_data=[]
-    axios.get('http://localhost:9001/employeeOrder/all').then(res=>{order_data=res.data}).catch(err=>{console.log(err)})
+    axios.get('https://spring-deploy-production-2a84.up.railway.app/employeeOrder/all').then(res=>{order_data=res.data}).catch(err=>{console.log(err)})
 
     let book_data =[]
-    axios.get('http://localhost:9001/order/all').then((res)=>{book_data=res.data}).catch((err)=>{console.log(err)})
+    axios.get('https://spring-deploy-production-2a84.up.railway.app/order/all').then((res)=>{book_data=res.data}).catch((err)=>{console.log(err)})
     
 
     const renderFunction=()=>{

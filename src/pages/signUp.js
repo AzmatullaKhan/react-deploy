@@ -101,12 +101,12 @@ export const SignUp=()=>{
             let pass1;
             let pass2;
 
-            axios.get('http://localhost:9001/customer/checkUsername/'+username)
+            axios.get('https://spring-deploy-production-2a84.up.railway.app/customer/checkUsername/'+username)
             .then(res=>{(localStorage.setItem('respponseUsername', res.data))})
             .catch((err)=>{console.log(err.message+"1")})
 
             
-            axios.get('http://localhost:9001/customer/checkMobileNumber/'+mobileNumber)
+            axios.get('https://spring-deploy-production-2a84.up.railway.app/customer/checkMobileNumber/'+mobileNumber)
             .then(res=>{localStorage.setItem('responseMobileNumber',res.data)})
             .catch((err)=>{console.log(err.message)})
             
@@ -153,7 +153,7 @@ export const SignUp=()=>{
                 gender:gender
             }
 
-            axios.post('http://localhost:9001/customer/saveCustomer',Customer)
+            axios.post('https://spring-deploy-production-2a84.up.railway.app/customer/saveCustomer',Customer)
             .then(res=>{return res})
             .catch((err)=>{console.log(err.message)})
 

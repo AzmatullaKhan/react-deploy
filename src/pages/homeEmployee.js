@@ -33,7 +33,7 @@ export const HomeEmployee=()=>{
 
     let main_data = []
 
-    axios.get('http://localhost:9001/images/all').then(res=>{main_data=res.data}).catch(err=>{console.log(err)})
+    axios.get('https://spring-deploy-production-2a84.up.railway.app/images/all').then(res=>{main_data=res.data}).catch(err=>{console.log(err)})
 
     setTimeout(()=>{
         document.getElementById('employee_username').textContent=localStorage.getItem('username_employee')
@@ -204,7 +204,7 @@ export const HomeEmployee=()=>{
         }
     
         try {
-            const response = await axios.post('http://localhost:9001/images/upload', formData);
+            const response = await axios.post('https://spring-deploy-production-2a84.up.railway.app/images/upload', formData);
             handleClosePostOrderClick();
             alert('Data rendered successfully')
             console.log(response)
@@ -259,13 +259,13 @@ export const HomeEmployee=()=>{
                 let val = document.getElementById(order_data[i].id).textContent
                 let status = order_data[i].deliveredstatus
                 if(val === "✅" && status!=='delivered')
-                    axios.post('http://localhost:9001/employeeOrder/updateStatus/'+order_data[i].id+"/delivered").then((res)=>{console.log(res)}).catch((err)=>{console.log(err)})
+                    axios.post('https://spring-deploy-production-2a84.up.railway.app/employeeOrder/updateStatus/'+order_data[i].id+"/delivered").then((res)=>{console.log(res)}).catch((err)=>{console.log(err)})
                 else if(val === "❌" && status!=='notDone')
-                    axios.post('http://localhost:9001/employeeOrder/updateStatus/'+order_data[i].id+"/notDone").then((res)=>{console.log(res)}).catch((err)=>{console.log(err)})
+                    axios.post('https://spring-deploy-production-2a84.up.railway.app/employeeOrder/updateStatus/'+order_data[i].id+"/notDone").then((res)=>{console.log(res)}).catch((err)=>{console.log(err)})
                 else if(val === "🚚" && status!=='exporting')
-                    axios.post('http://localhost:9001/employeeOrder/updateStatus/'+order_data[i].id+"/exporting").then((res)=>{console.log(res)}).catch((err)=>{console.log(err)})
+                    axios.post('https://spring-deploy-production-2a84.up.railway.app/employeeOrder/updateStatus/'+order_data[i].id+"/exporting").then((res)=>{console.log(res)}).catch((err)=>{console.log(err)})
                 else if(val === "🗑️" && status!=='deleted')
-                    axios.post('http://localhost:9001/employeeOrder/updateStatus/'+order_data[i].id+"/deleted").then((res)=>{console.log(res)}).catch((err)=>{console.log(err)})
+                    axios.post('https://spring-deploy-production-2a84.up.railway.app/employeeOrder/updateStatus/'+order_data[i].id+"/deleted").then((res)=>{console.log(res)}).catch((err)=>{console.log(err)})
 
             }
         }
@@ -312,7 +312,7 @@ export const HomeEmployee=()=>{
             username, email, subject, description
         }
 
-        axios.post('http://localhost:9001/employee/employeeEmail',Email)
+        axios.post('https://spring-deploy-production-2a84.up.railway.app/employee/employeeEmail',Email)
         .then(res=>{return res})
         .then(handleCloseMailClick())
         .catch((err)=>{console.log(err.message)})
@@ -326,10 +326,10 @@ export const HomeEmployee=()=>{
         username= localStorage.getItem('username_employee')
     },100)
     let order_data=[]
-    axios.get('http://localhost:9001/employeeOrder/all').then(res=>{order_data=res.data}).catch(err=>{console.log(err)})
+    axios.get('https://spring-deploy-production-2a84.up.railway.app/employeeOrder/all').then(res=>{order_data=res.data}).catch(err=>{console.log(err)})
 
     let book_data =[]
-    axios.get('http://localhost:9001/order/all').then((res)=>{book_data=res.data}).catch((err)=>{console.log(err)})
+    axios.get('https://spring-deploy-production-2a84.up.railway.app/order/all').then((res)=>{book_data=res.data}).catch((err)=>{console.log(err)})
     
 
     const renderFunction=()=>{

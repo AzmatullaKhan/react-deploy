@@ -20,7 +20,7 @@ export const Login=()=>{
     const validate=(e)=>{
         e.preventDefault()
         let username=document.getElementById('login_username').value
-        axios.get('http://localhost:9001/customer/login/'+username)
+        axios.get('https://spring-deploy-production-2a84.up.railway.app/customer/login/'+username)
         .then(res=>{
             localStorage.setItem('username',res.data.username)
             localStorage.setItem('password',res.data.password)
